@@ -4,11 +4,10 @@ from products.models import Categories
 
 
 def index(request):
-    categories = Categories.objects.all()
+
     context = {
         'title': 'Home',
         'content': 'Home page',
-        'categories': categories,
     }
     return render(request, 'main/index.html', context)
 
